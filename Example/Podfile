@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EtsuriLoaderView_Example' do
+  pod 'EtsuriLoaderView', :path => '../'
+
+  target 'EtsuriLoaderView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
