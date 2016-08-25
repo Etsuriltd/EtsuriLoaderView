@@ -1,0 +1,6 @@
+framework module EtsuriLoaderView {
+  umbrella header "EtsuriLoaderView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - EtsuriLoaderView (0.1.0)
+
+DEPENDENCIES:
+  - EtsuriLoaderView (from `../`)
+
+EXTERNAL SOURCES:
+  EtsuriLoaderView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EtsuriLoaderView: 6b2464f487f750864fd80c643a6448c1820cd0f7
+
+PODFILE CHECKSUM: cb0d1e9835cb7994d62f80450588f452095a65c9
+
+COCOAPODS: 1.0.1
