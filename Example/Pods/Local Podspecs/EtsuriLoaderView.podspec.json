@@ -1,9 +1,9 @@
 {
   "name": "EtsuriLoaderView",
   "version": "0.1.0",
-  "summary": "A short description of EtsuriLoaderView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/EtsuriLoaderView",
+  "summary": "Loaderview that animated etsuri logo",
+  "description": "this is an animated version of etsuri logo that can be used to loading",
+  "homepage": "https://github.com/Etsuriltd/EtsuriLoaderView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "wahyu sumartha": "wahyusumartha@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/EtsuriLoaderView.git",
+    "git": "https://github.com/Etsuriltd/EtsuriLoaderView.git",
     "tag": "0.1.0"
   },
   "platforms": {

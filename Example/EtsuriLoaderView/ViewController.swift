@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import EtsuriLoaderView
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor.blueColor()
+        
+        EtsuriLoaderView.showLoading(fromView: self.view)
+        
+        
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 4 * Int64(NSEC_PER_SEC))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            EtsuriLoaderView.hideLoadingView(fromView: self.view)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
