@@ -9,8 +9,8 @@
 
 import UIKit
 
-let logoLineWidth: CGFloat = 2
-let maxCircleWidth: CGFloat = 10
+let logoLineWidth: CGFloat = 1
+let maxCircleWidth: CGFloat = 7
 
-let maxWidth: CGFloat = 83.17
-let maxHeight: CGFloat = 126
+let maxWidth: CGFloat = 52
+let maxHeight: CGFloat = 80
