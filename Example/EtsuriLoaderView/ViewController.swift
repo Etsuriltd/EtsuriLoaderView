@@ -13,9 +13,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor.grayColor()
         
-        EtsuriLoaderView.showLoading(fromView: self.view, screenAdjustment: CGPointMake(0, 0))
+        EtsuriLoaderView.showLoading(fromView: self.view,
+                                     screenAdjustment: CGPointMake(0, 0),
+                                     isOverlayed: true)
         
         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 4 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {

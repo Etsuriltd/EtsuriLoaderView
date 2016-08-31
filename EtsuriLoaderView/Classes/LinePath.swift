@@ -14,10 +14,11 @@ class LinePath: UIBezierPath {
     static let midCircleOriginY = (maxHeight - maxCircleWidth) / 2
     static let originY = midCircleOriginY + (maxCircleWidth/2)
     static let originX = maxWidth - maxCircleWidth
+    static let margin = framePadding/2
     
     var midStraightLine: UIBezierPath {
-        let endPoint = CGPointMake(LinePath.midCircleOriginX + (maxCircleWidth/2), LinePath.originY)
-        let startPoint = CGPointMake(0, LinePath.originY)
+        let endPoint = CGPointMake(LinePath.midCircleOriginX + (maxCircleWidth/2) + LinePath.margin, LinePath.originY + LinePath.margin)
+        let startPoint = CGPointMake(LinePath.margin, LinePath.originY + LinePath.margin)
         let bezierPath = UIBezierPath()
         bezierPath.moveToPoint(startPoint)
         bezierPath.addLineToPoint(endPoint)
@@ -25,9 +26,9 @@ class LinePath: UIBezierPath {
     }
     
     var topQuadCurveLine: UIBezierPath {
-        let startPoint = CGPointMake(LinePath.originX + 1, 0 + (maxCircleWidth/2))
-        let endPoint = CGPointMake(0 + logoLineWidth/2, LinePath.originY)
-        let controlPoint = CGPointMake(0, maxCircleWidth/2)
+        let startPoint = CGPointMake(LinePath.margin + LinePath.originX + 1, LinePath.margin + (maxCircleWidth/2))
+        let endPoint = CGPointMake(LinePath.margin + logoLineWidth/2, LinePath.originY + LinePath.margin)
+        let controlPoint = CGPointMake(LinePath.margin, maxCircleWidth/2 + LinePath.margin)
         let bezierPath = UIBezierPath()
         bezierPath.moveToPoint(startPoint)
         bezierPath.addQuadCurveToPoint(endPoint, controlPoint: controlPoint)
@@ -35,9 +36,9 @@ class LinePath: UIBezierPath {
     }
     
     var bottomQuadCurveLine: UIBezierPath {
-        let endPoint = CGPointMake(LinePath.originX + 1, maxHeight - maxCircleWidth + (maxCircleWidth/2))
-        let startPoint = CGPointMake(0 + logoLineWidth/2, LinePath.originY)
-        let controlPoint = CGPointMake(0, maxHeight - (maxCircleWidth/2))
+        let endPoint = CGPointMake(LinePath.margin + LinePath.originX + 1, maxHeight - maxCircleWidth + (maxCircleWidth/2) + LinePath.margin)
+        let startPoint = CGPointMake(LinePath.margin + logoLineWidth/2, LinePath.originY + LinePath.margin)
+        let controlPoint = CGPointMake(LinePath.margin, maxHeight - (maxCircleWidth/2) + LinePath.margin)
         let bezierPath = UIBezierPath()
         bezierPath.moveToPoint(startPoint)
         bezierPath.addQuadCurveToPoint(endPoint, controlPoint: controlPoint)

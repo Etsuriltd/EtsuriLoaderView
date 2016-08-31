@@ -14,3 +14,5 @@ let maxCircleWidth: CGFloat = 7
 
 let maxWidth: CGFloat = 52
 let maxHeight: CGFloat = 80
+
+let framePadding: CGFloat = 20

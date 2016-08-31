@@ -11,38 +11,38 @@ import UIKit
 class CirclePath: UIBezierPath {
 
     var circlePathSmall: UIBezierPath {
-        let originX = maxWidth - (maxCircleWidth/5)
-        let originY: CGFloat = 0
+        let originX = maxWidth - (maxCircleWidth/5) + (framePadding/2)
+        let originY: CGFloat = framePadding/2
         return UIBezierPath(ovalInRect: CGRectMake(originX, originY, maxCircleWidth/5, maxCircleWidth/5))
     }
     
     var circlePathBig: UIBezierPath {
-        let originX = maxWidth - maxCircleWidth
-        return UIBezierPath(ovalInRect: CGRectMake(originX, 0, maxCircleWidth, maxCircleWidth))
+        let originX = maxWidth - maxCircleWidth + (framePadding/2)
+        return UIBezierPath(ovalInRect: CGRectMake(originX, framePadding/2, maxCircleWidth, maxCircleWidth))
     }
     
     var midCirclePathSmall: UIBezierPath {
-        let originX = (maxWidth/2)
-        let originY = (maxHeight - (maxCircleWidth/5)) / 2
+        let originX = (maxWidth/2) + (framePadding/2)
+        let originY = ((maxHeight - (maxCircleWidth/5)) / 2) + (framePadding/2)
         return UIBezierPath(ovalInRect: CGRectMake(originX, originY, maxCircleWidth/5, maxCircleWidth/5))
         
     }
     
     var midCirclePathBig: UIBezierPath {
-        let originX = maxWidth/2
-        let originY = (maxHeight - maxCircleWidth) / 2
+        let originX = maxWidth/2 + (framePadding/2)
+        let originY = ((maxHeight - maxCircleWidth) / 2) + (framePadding/2)
         return UIBezierPath(ovalInRect: CGRectMake(originX, originY, maxCircleWidth, maxCircleWidth))
     }
     
     var bottomCirclePathBig: UIBezierPath {
-        let originX = maxWidth - maxCircleWidth
-        let originY = maxHeight - maxCircleWidth
+        let originX = maxWidth - maxCircleWidth + (framePadding/2)
+        let originY = maxHeight - maxCircleWidth + (framePadding/2)
         return UIBezierPath(ovalInRect: CGRectMake(originX, originY, maxCircleWidth, maxCircleWidth))
     }
     
     var bottomCirclePathSmall: UIBezierPath {
-        let originX = maxWidth - (maxCircleWidth/5)
-        let originY = maxHeight - (maxCircleWidth/5)
+        let originX = maxWidth - (maxCircleWidth/5) + (framePadding/2)
+        let originY = maxHeight - (maxCircleWidth/5) + (framePadding/2)
         return UIBezierPath(ovalInRect: CGRectMake(originX, originY, maxCircleWidth/5, maxCircleWidth/5))
     }
     

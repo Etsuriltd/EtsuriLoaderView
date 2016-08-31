@@ -12,21 +12,30 @@ public class EtsuriLoaderView: UIView {
     
     private let logoLayer = LogoLayer()
     
-    public init(screenAdjustment point: CGPoint) {
+    public init(screenAdjustment point: CGPoint, isOverlayed: Bool) {
         let screenWidth = UIScreen.mainScreen().bounds.size.width - point.x
         let screenHeight = UIScreen.mainScreen().bounds.size.height - point.y
         
-        let originX = (screenWidth - maxWidth) / 2
-        let originY = (screenHeight - maxHeight) / 2
+        let originX = (screenWidth - (maxWidth + framePadding)) / 2
+        let originY = (screenHeight - (maxHeight + framePadding)) / 2
         
-        super.init(frame: CGRectMake(originX, originY, maxWidth, maxHeight))
-        self.backgroundColor = UIColor.clearColor()
+        super.init(frame: CGRectMake(originX, originY, maxWidth + framePadding, maxHeight + framePadding))
+        
+        if isOverlayed {
+            self.backgroundColor = UIColor(white: 0/255, alpha: 0.75)
+            self.layer.cornerRadius = 7.5
+        } else {
+            self.backgroundColor = UIColor.clearColor()
+        }
         
         self.layer.addSublayer(logoLayer)
     }
     
-    public class func showLoading(fromView view: UIView, screenAdjustment point: CGPoint) {
-        let loadingView = EtsuriLoaderView(screenAdjustment: point)
+    public class func showLoading(fromView view: UIView,
+                                           screenAdjustment point: CGPoint,
+                                                            isOverlayed: Bool) {
+        let loadingView = EtsuriLoaderView(screenAdjustment: point,
+                                           isOverlayed: isOverlayed)
         view.addSubview(loadingView)
     }
     
