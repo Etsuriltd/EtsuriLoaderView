@@ -21,13 +21,15 @@ pod "EtsuriLoaderView"
 ```
 
 Usage: 
-    EtsuriLoaderView is very straight forward. Simply call this class function to show the animation loader
+    
+EtsuriLoaderView is very straight forward. Simply call this class function to show the animation loader
 
 ```swift
 EtsuriLoaderView.showLoading(fromView: self.view, screenAdjustment: CGPointMake(0, 0), isOverlayed: true)
 ```
     
-    once you done with your animation what you need to do just call one line function to remove your animation from the view 
+    
+once you done with your animation what you need to do just call one line function to remove your animation from the view 
 
 ```swift
 EtsuriLoaderView.hideLoadingView(fromView: self.view)
