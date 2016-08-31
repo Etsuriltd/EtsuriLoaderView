@@ -20,6 +20,22 @@ it, simply add the following line to your Podfile:
 pod "EtsuriLoaderView"
 ```
 
+Usage: 
+    EtsuriLoaderView is very straight forward. Simply call this class function to show the animation loader
+
+    ```swift
+    EtsuriLoaderView.showLoading(fromView: self.view, screenAdjustment: CGPointMake(0, 0), isOverlayed: true)
+    ```
+    
+    once you done with your animation what you need to do just call one line function to remove your animation from the view 
+    ```swift
+    EtsuriLoaderView.hideLoadingView(fromView: self.view)
+    ```
+## Changelog
+
+Version 0.0.4: 
+- adding overlay effect 
+
 ## Author
 
 wahyu sumartha, wahyusumartha@gmail.com
@@ -27,3 +43,4 @@ wahyu sumartha, wahyusumartha@gmail.com
 ## License
 
 EtsuriLoaderView is available under the MIT license. See the LICENSE file for more info.
+
