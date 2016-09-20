@@ -39,8 +39,10 @@ class CircleLayer: CAShapeLayer {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func animationDidStart(anim: CAAnimation) {
+}
+
+extension CircleLayer: CAAnimationDelegate {
+    func animationDidStart(anim: CAAnimation) {
         path = circlesPath.CGPath
     }
 }

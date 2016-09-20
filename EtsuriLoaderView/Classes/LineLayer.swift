@@ -24,7 +24,6 @@ class LineLayer: CAShapeLayer {
         animation.duration = 0.5
         
         let animationGroup = CAAnimationGroup()
-        animationGroup.delegate = self
         animationGroup.beginTime = 0
         animationGroup.duration = 0.75
         animationGroup.repeatCount = Float.infinity
@@ -37,9 +36,5 @@ class LineLayer: CAShapeLayer {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func animationDidStart(anim: CAAnimation) {
-
     }
 }
