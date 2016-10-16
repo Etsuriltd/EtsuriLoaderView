@@ -17,7 +17,7 @@ class CircleLayer: CAShapeLayer {
 
     override init() {
         super.init()
-        fillColor = UIColor.whiteColor().CGColor
+        fillColor = UIColor(red: 255/255, green: 60/255, blue: 60/255, alpha: 1).CGColor
         
         
         let animation: CABasicAnimation = CABasicAnimation(keyPath: "path")

@@ -14,7 +14,7 @@ class LineLayer: CAShapeLayer {
     override init() {
         super.init()
         fillColor = UIColor.clearColor().CGColor
-        strokeColor = UIColor.whiteColor().CGColor
+        strokeColor = UIColor(red: 255/255, green: 60/255, blue: 60/255, alpha: 1).CGColor
         lineWidth = logoLineWidth
         path = linePath.CGPath
 
